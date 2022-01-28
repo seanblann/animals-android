@@ -2,6 +2,16 @@ plugins {
     id 'com.android.application'
 }
 
+static def getProperty(String propertyFile, String propertyName) {
+    Properties properties = new Properties()
+    properties.load(new FileInputStream(propertyFile))
+    return properties.getProperty(propertyName)
+}
+
+static String quoted(String value) {
+    return "\"$value\""
+}
+
 android {
     compileSdk 31
 
@@ -13,6 +23,11 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        buildConfigField 'String', 'BASE_URL',
+                quoted(getProperty("$projectDir/local.properties", 'base_url'))
+        buildConfigField 'String', 'CONTENT_FORMAT',
+                quoted(getProperty("$projectDir/local.properties", 'content_format'))
     }
 
     buildTypes {
