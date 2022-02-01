@@ -14,6 +14,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.GET;
 
 public interface WebServiceProxy {
+
     @GET(value = "images")
     Call<List<Animal>> getAnimals();
 
