@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <TextView
-  android:id="@+id/animal_title"
+  android:id="@+id/spinner_title"
   xmlns:android="http://schemas.android.com/apk/res/android"
   android:layout_width="match_parent"
-  android:textAppearance="?android:attr/textAppearanceLargePopupMenu"
   android:layout_height="?android:attr/listPreferredItemHeight"
-  >
+  style="@style/AnimalSpinner"
+  android:textAppearance="?android:attr/textAppearanceLargePopupMenu"
+  android:singleLine="true"
+  android:ellipsize="marquee">
 
 </TextView>

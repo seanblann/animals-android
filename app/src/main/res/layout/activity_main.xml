@@ -5,14 +5,15 @@
   xmlns:tools="http://schemas.android.com/tools"
   android:layout_width="match_parent"
   android:layout_height="match_parent"
-  android:layout_margin="8dp"
-  android:background="@color/black"
+  android:layout_margin="@dimen/half_static_spacing"
+  android:background="@color/white"
   tools:context=".controller.MainActivity">
 <Spinner
+    android:id="@+id/animal_selector"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="Trespassers Will Be Shot!"
-    android:layout_margin="8dp"
+    android:layout_margin="@dimen/half_static_spacing"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"/>
 
