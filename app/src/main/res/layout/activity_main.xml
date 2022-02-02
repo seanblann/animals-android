@@ -12,10 +12,24 @@
     android:id="@+id/animal_selector"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    style="@style/AnimalSpinner"
     android:text="Trespassers Will Be Shot!"
     android:layout_margin="@dimen/half_static_spacing"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent"/>
 
+  <ImageView
+    android:id="@+id/image"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_margin="@dimen/half_static_spacing"
+    android:adjustViewBounds="true"
+    android:scaleType="fitCenter"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/animal_selector"
+    android:contentDescription="@string/image_description_placeholder"
+    />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

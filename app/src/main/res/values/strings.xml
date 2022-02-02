@@ -1,3 +1,4 @@
 <resources>
   <string name="app_name">Animals</string>
+  <string name="image_description_placeholder">Image Placeholder</string>
 </resources>
