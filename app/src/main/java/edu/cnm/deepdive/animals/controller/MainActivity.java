@@ -51,24 +51,8 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     protected List<Animal> doInBackground(Void... voids) {
-      try {
-        Response<List<Animal>> response = WebServiceProxy.getInstance()
-            .getAnimals()
-            .execute();
-        if (response.isSuccessful()) {
-          Log.d(getClass().getName(), response.body().toString());
 
-          return response.body();
-        } else {
-          Log.e(getClass().getName(), response.message());
-          cancel(true);
-          return null;
-        }
-      } catch (IOException e) {
-        Log.e(getClass().getName(), e.getMessage(), e);
-        cancel(true);
-        return null;
-      }
+      return null;
     }
 
     @Override
