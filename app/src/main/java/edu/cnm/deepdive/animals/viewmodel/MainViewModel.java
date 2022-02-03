@@ -27,6 +27,7 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
     animals = new MutableLiveData<>();
     throwable = new MutableLiveData<>();
     pending = new CompositeDisposable();
+    load();
   }
 
   public LiveData<List<Animal>> getAnimals() {
@@ -39,7 +40,16 @@ public class MainViewModel extends AndroidViewModel implements LifecycleObserver
 
   //TODO implement method to get animals
   private void load() {
+      pending.add(
+              repository
+                    .getAnimals()
+                    .subscribe(
+                            animals::postValue,
+                            throwable::postValue
+            )
+    );
   }
+
   //TODO better implementation needed
   @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
   private void clearPending() {

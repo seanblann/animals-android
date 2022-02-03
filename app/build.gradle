@@ -53,13 +53,13 @@ dependencies {
 
     //ReactiveX libraries
     implementation 'io.reactivex.rxjava3:rxjava:3.1.3'
-    implementation 'io.ractivex.rxjava3:rxandroid:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.0'
 
     //Retrofit Dependencies
     def retrofitVersion = '2.9.0'
     implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
     implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
-    implementation "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion"
+    implementation "com.squareup.retrofit2:adapter-rxjava3:$retrofitVersion"
 
     //Logging
     implementation 'com.squareup.okhttp3:logging-interceptor:4.9.3'
